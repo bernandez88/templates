@@ -1,0 +1,11 @@
+parameters:
+steps:
+  - script: |
+      if [ -z "$MY_VAR" ]; then
+        echo "❌ La variable MY_VAR NO existe (o está vacía)"
+      else
+        echo "✅ La variable MY_VAR SÍ existe: ${MY_VAR}"
+      fi
+    displayName: 'Trigger pipeline'
+    env:
+      MY_VAR: $(MY_VAR)
