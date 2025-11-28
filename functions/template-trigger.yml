@@ -7,4 +7,4 @@ steps:
       fi
     displayName: 'Trigger pipeline'
     env:
-      MY_VAR: $(MY_VAR)
+      MY_VAR: $[variables.MY_VAR]
